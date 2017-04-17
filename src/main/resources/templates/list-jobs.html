@@ -12,6 +12,20 @@
 
     <!-- TODO #3 - Use the same list display from search.html -->
 
+    <span th:each="job : ${jobs}">
+        <span th:each="entry : ${job.entrySet()}">
+
+            <table class="job-listing">
+                <tr>
+                    <td th:text="${entry.getKey()}"></td>
+                    <td th:text="${entry.getValue()}"></td>
+                </tr>
+            </table>
+
+        </span>
+
+    </span>
+
 </div>
 
 </body>
